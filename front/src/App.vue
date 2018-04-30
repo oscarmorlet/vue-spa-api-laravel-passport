@@ -9,7 +9,7 @@
          <v-chip color="primary" text-color="white">Secondary</v-chip>
          <v-chip color="success" text-color="white">Colored Chip</v-chip>
          <v-chip color="amber darken-4" text-color="white">Colored Chip</v-chip>
-         <v-chip color="blue darken-3" text-color="white">Colored Chip</v-chip>
+         <v-chip color="info" text-color="white">Colored Chip</v-chip>
        </div>
        <div>
          <v-btn color="success">Success</v-btn>
@@ -27,7 +27,7 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      msg2: 'Do not Stop Learning'
+      msg2: "Don't Stop Learning"
     }
   }
 }
