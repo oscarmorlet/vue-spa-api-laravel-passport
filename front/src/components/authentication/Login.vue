@@ -65,12 +65,12 @@
       ],
       e1: true,
     }),
-
     methods: {
       submit () {
         if (this.$refs.form.validate()) {
           // Native form submission is not yet supported
           // alert('Pass ' + this.password + ' y email ' + this.email);
+          var _this = this;
           var data = {
                 client_id: 2,
                 client_secret: '99aoFG3TR21izoYfGXNK2twKBDzTEVKKjRiCTTvq',
@@ -80,7 +80,9 @@
           }
            axiosInstance.post('/oauth/token', data )
           .then(function (response) {
-             alert( response );
+              _this.$auth.setToken( response.data.access_token, response.data.expires_in + Date.now() )
+              // _this.$router.push('/panel')
+              _this.$router.go('/panel')
           })
           .catch(function (error) {
             console.log(error);
